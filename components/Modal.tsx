@@ -56,7 +56,7 @@ function Modal() {
       open={showModal}
       onClose={handleClose}
       className="fixed !top-4 left-0 right-0 z-50 w-full mx-auto max-w-3xl
-      overflow-hidden rounded-md no-scrollbar"
+      overflow-hidden rounded-md max-h-[calc(100vh-2rem)]"
     >
       <>
         <button
@@ -67,7 +67,7 @@ function Modal() {
           <XMarkIcon className="h-6 w-6" />
         </button>
 
-        <div className="relative pt-[56.25%]">
+        <div className="relative pt-[50.25%]">
           <ReactPlayer
             src={
               trailer
@@ -111,7 +111,7 @@ function Modal() {
           </div>
         </div>
 
-        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-8">
+        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-6 py-3">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-green-400">
@@ -128,15 +128,15 @@ function Modal() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
-              <p className="w-5/6">{movie?.overview}</p>
-              <div className="flex flex-col space-y-3 text-sm">
-                <div>
+            <div className="flex flex-col gap-6 font-light md:flex-row">
+              <p className="min-w-0 flex-1 text-base leading-relaxed">{movie?.overview}</p>
+              <div className="w-full shrink-0 text-sm md:w-48">
+                <div className="mb-3">
                   <span className="text-[gray]">Genres: </span>
                   {genres.map((genre) => genre.name).join(`, `)}
                 </div>
 
-                <div>
+                <div className="mb-3">
                   <span className="text-[gray]">Original language: </span>
                   {movie?.original_language}
                 </div>
