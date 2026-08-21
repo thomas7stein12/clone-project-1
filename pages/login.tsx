@@ -58,12 +58,15 @@ function Login() {
       md:mt-0 md:max-w-md md:px-14"
         action=""
       >
-        <h1 className="text-4xl font-semibold">Sign In</h1>
+        <h1 className="text-4xl font-semibold">
+          Welcome to my Netflix clone! Enter test@test.com to sign in and try it
+          out!
+        </h1>
         <div className="space-y-4">
           <label className="inline-block w-full">
             <input
               type="email"
-              placeholder="Email"
+              placeholder="test@test.com"
               className="input"
               {...register("email", { required: true })}
             />
@@ -78,7 +81,7 @@ function Login() {
           <label className="inline-block w-full">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Enter password Test123, then sign in!"
               className="input"
               {...register("password", { required: true })}
             />
@@ -97,7 +100,7 @@ function Login() {
           Sign In
         </button>
         <div className="text-[gray]">
-          New to Netflix?{" "}
+          Or try the sign up option!{" "}
           <button
             type="submit"
             className="text-white hover:underline"
